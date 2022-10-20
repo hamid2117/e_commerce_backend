@@ -1,17 +1,29 @@
 require('dotenv').config()
+require('express-async-errors')
+
+//express
 const express = require('express')
 const app = express()
 
-app.use(express.json())
 //database
 const connectDB = require('./db/connect')
+
+//middleware
+const notFoundMiddleware = require('./middleware/not-found')
+const errorHandlerMiddleware = require('./middleware/not-found')
+
+app.use(express.json())
 
 app.get('/', (req, res) => {
   res.send('<h2>Welcome to ecommerce website')
 })
 //app.use('/api/v1')
 
-const Port = process.env.PORT || 3000
+app.use(notFoundMiddleware)
+
+app.use(errorHandlerMiddleware)
+
+const Port = process.env.PORT || 5000
 
 const start = async () => {
   try {
