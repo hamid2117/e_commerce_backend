@@ -17,7 +17,7 @@ const errorHandlerMiddleware = require('./middleware/not-found')
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.send('<h2>Welcome to ecommerce website')
+  res.send('<h2>Welcome to ecommerce website</h2>')
 })
 app.use('/api/v1/auth', authRouter)
 
