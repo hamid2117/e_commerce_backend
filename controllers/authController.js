@@ -1,4 +1,5 @@
 const User = require('../models/User')
+const { StatusCodes } = require('http-status-codes')
 const { createJwt, isTokenValid } = require('../utils')
 const CustomError = require('../errors')
 
@@ -14,10 +15,14 @@ const register = async (req, res) => {
 
   //cookie
   const oneDay = 1000 * 60 * 60 * 24
+  res.cookie('accessToken', token, {
+    expires: new Date(Date.now() + oneDay),
+    httpOnly: true,
+  })
 
-  res.cookie('accessToken', token, { expires: oneDay, httpOnly: true })
-
-  res.status(StatusCodes.CREATED).json({ ...user })
+  res
+    .status(StatusCodes.CREATED)
+    .json({ user: { name: user.name, email: user.email } })
 }
 const login = async (req, res) => {
   res.status(StatusCodes.OK).json({})

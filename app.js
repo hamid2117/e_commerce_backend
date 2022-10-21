@@ -4,6 +4,11 @@ require('express-async-errors')
 //express
 const express = require('express')
 const app = express()
+
+//otherPackages
+const morgan = require('morgan')
+const cookieParser = require('cookie-parser')
+
 //routers
 const authRouter = require('./routes/authRoutes')
 
@@ -15,9 +20,12 @@ const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/not-found')
 
 app.use(express.json())
+app.use(morgan('tiny'))
+app.use(cookieParser())
 
 //
 app.get('/', (req, res) => {
+  console.log(req.cookies)
   res.send('<h2>Welcome to ecommerce website</h2>')
 })
 app.use('/api/v1/auth', authRouter)
