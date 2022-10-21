@@ -74,7 +74,7 @@ $% morgan will show which route is called and how much it taken the time in term
 
 #### JWT
 
-- [] require 'jsonwebtoken' package
+- [x] require 'jsonwebtoken' package
 - [] create jwt - jwt.sign(payload,secret,options)
 - [] verify jwt - jwt.verify(token,secret)
 - [] add variables in .env JWT_SECRET=jwtSecret and JWT_LIFETIME=1d

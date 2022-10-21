@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const { StatusCodes } = require('http-status-codes')
-const { createJwt, isTokenValid } = require('../utils')
+const { attachCookiesToResponse, isTokenValid } = require('../utils')
 const CustomError = require('../errors')
 
 const register = async (req, res) => {
@@ -11,14 +11,8 @@ const register = async (req, res) => {
   const user = await User.create({ name, email, password, role })
 
   const userToken = { name: user.name, _id: user._id, role: user.role }
-  const token = createJwt(userToken)
 
-  //cookie
-  const oneDay = 1000 * 60 * 60 * 24
-  res.cookie('accessToken', token, {
-    expires: new Date(Date.now() + oneDay),
-    httpOnly: true,
-  })
+  attachCookiesToResponse({ payload: userToken, res })
 
   res
     .status(StatusCodes.CREATED)
