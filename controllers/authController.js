@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const { StatusCodes } = require('http-status-codes')
-const { attachCookiesToResponse, isTokenValid } = require('../utils')
+const { attachCookiesToResponse, createTokenUser } = require('../utils')
 const CustomError = require('../errors')
 
 const register = async (req, res) => {
@@ -10,7 +10,7 @@ const register = async (req, res) => {
 
   const user = await User.create({ name, email, password, role })
 
-  const userToken = { name: user.name, _id: user._id, role: user.role }
+  const userToken = createTokenUser(user)
 
   attachCookiesToResponse({ payload: userToken, res })
 
@@ -34,7 +34,7 @@ const login = async (req, res) => {
     throw new CustomError.UnauthenticatedError('Invalid password')
   }
 
-  const userToken = { name: user.name, _id: user._id, role: user.role }
+  const userToken = createTokenUser(user)
 
   attachCookiesToResponse({ payload: userToken, res })
 

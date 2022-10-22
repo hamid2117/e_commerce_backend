@@ -43,7 +43,7 @@ const updateUserPassword = async (req, res) => {
   }
 
   user.password = newPassword
-  user.save()
+  await user.save()
 
   res
     .status(StatusCodes.OK)
