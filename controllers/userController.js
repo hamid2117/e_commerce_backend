@@ -18,7 +18,7 @@ const getSingleUser = async (req, res) => {
   res.status(StatusCodes.OK).json({ user })
 }
 const showCurrentUser = async (req, res) => {
-  res.status(StatusCodes.OK).json({})
+  res.status(StatusCodes.OK).json({ user: req.user })
 }
 const updateUser = async (req, res) => {
   const {} = req.body
@@ -26,7 +26,28 @@ const updateUser = async (req, res) => {
 }
 
 const updateUserPassword = async (req, res) => {
-  res.status(StatusCodes.OK).json({})
+  const { oldPassword, newPassword } = req.body
+
+  if (!oldPassword || !newPassword) {
+    throw new CustomError.BadRequestError(
+      'Please provide oldPassword & newPassword'
+    )
+  }
+
+  const user = await User.findById(req.user.userId).select('password')
+
+  const isMatched = await User.comparePassword(oldPassword)
+
+  if (!isMatched) {
+    throw new CustomError.UnauthenticatedError('Old Password is incorrect')
+  }
+
+  user.password = newPassword
+  user.save()
+
+  res
+    .status(StatusCodes.OK)
+    .json({ msg: 'Successfully updated the password!!!' })
 }
 
 module.exports = {
