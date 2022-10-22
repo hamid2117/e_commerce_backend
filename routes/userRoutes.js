@@ -7,14 +7,24 @@ const {
   updateUser,
   updateUserPassword,
 } = require('../controllers/userController')
+const {
+  authenticateUser,
+  authorizePermissions,
+} = require('../middleware/authentication')
 
-router.get('/', getAllUsers)
+router.get('/', authenticateUser, authorizePermissions('admin'), getAllUsers)
 
 //if you  set simple path below query include path then there is an error. so params path always in last.bcs there is only / .if there is /user/ then there is no problem.
-router.get('/showMe', showCurrentUser)
+
+router.get('/showMe', authenticateUser, showCurrentUser)
 router.patch('/updateUser', updateUser)
 router.patch('/updateUserPassword', updateUserPassword)
 
-router.get('/:id', getSingleUser)
+router.get(
+  '/:id',
+  authenticateUser,
+  authorizePermissions('admin'),
+  getSingleUser
+)
 
 module.exports = router

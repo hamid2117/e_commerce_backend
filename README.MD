@@ -112,21 +112,27 @@ $% morgan will show which route is called and how much it taken the time in term
 
 #### GetAllUsers and GetSingleUser
 
-- [] Get all users where role is 'user' and remove password
-- [] Get Single User where id matches id param and remove password
-- [] If no user 404
+- [x] Get all users where role is 'user' and remove password
+- [x] Get Single User where id matches id param and remove password
+- [x] If no user 404
 
 #### Authenticate User Setup
 
+x
+
 #### Auth User Complete
+
+x
 
 #### Authorize Permissions Setup
 
-- [] hardcode
+x
+
+- [x] hardcode
 
 #### Authorize Permissions Complete
 
-- [] introduce params
+- [x] introduce params
 
 #### ShowCurrentUser
 
