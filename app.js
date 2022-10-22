@@ -8,6 +8,7 @@ const app = express()
 //otherPackages
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
+const cors = require('cors')
 
 //routers
 const authRouter = require('./routes/authRoutes')
@@ -22,7 +23,7 @@ const errorHandlerMiddleware = require('./middleware/not-found')
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cookieParser(process.env.JWT_SECRET))
-
+app.use(cors()) // to access api all domain not only same domain for example in node :5000 and react:3000
 //
 
 app.get('/', (req, res) => {
