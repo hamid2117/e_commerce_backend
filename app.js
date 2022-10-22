@@ -18,7 +18,7 @@ const connectDB = require('./db/connect')
 
 //middleware
 const notFoundMiddleware = require('./middleware/not-found')
-const errorHandlerMiddleware = require('./middleware/not-found')
+const errorHandlerMiddleware = require('./middleware/error-handler')
 
 app.use(express.json())
 app.use(morgan('tiny'))
@@ -31,9 +31,9 @@ app.get('/', (req, res) => {
   res.send('<h2>Welcome to ecommerce website</h2>')
 })
 app.use('/api/v1/auth', authRouter)
-app.use('/api/v1/user', userRouter)
-app.use(notFoundMiddleware)
+app.use('/api/v1/users', userRouter)
 
+app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
 
 const Port = process.env.PORT || 5000
