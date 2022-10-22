@@ -17,7 +17,7 @@ router.get('/', authenticateUser, authorizePermissions('admin'), getAllUsers)
 //if you  set simple path below query include path then there is an error. so params path always in last.bcs there is only / .if there is /user/ then there is no problem.
 
 router.get('/showMe', authenticateUser, showCurrentUser)
-router.patch('/updateUser', updateUser)
+router.patch('/updateUser', authenticateUser, updateUser)
 router.patch('/updateUserPassword', authenticateUser, updateUserPassword)
 
 router.get(

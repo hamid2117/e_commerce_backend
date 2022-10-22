@@ -1,5 +1,3 @@
-//- [] export (getAllUsers,getSingleUser,showCurrentUser,updateUser,updateUserPassword) functions
-
 const User = require('../models/User')
 const CustomError = require('../errors')
 const { StatusCodes } = require('http-status-codes')
@@ -21,8 +19,19 @@ const showCurrentUser = async (req, res) => {
   res.status(StatusCodes.OK).json({ user: req.user })
 }
 const updateUser = async (req, res) => {
-  const {} = req.body
-  res.status(StatusCodes.OK).json({})
+  const { email, name } = req.body
+
+  if (!email || !name) {
+    throw new CustomError.BadRequestError('Both Values is required')
+  }
+
+  const user = await User.findByIdAndUpdate(
+    req.user.userId,
+    { email, name },
+    { new: true, runValidators: true }
+  )
+
+  res.status(StatusCodes.OK).json({ user })
 }
 
 const updateUserPassword = async (req, res) => {
