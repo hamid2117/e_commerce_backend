@@ -18,6 +18,7 @@ const register = async (req, res) => {
     .status(StatusCodes.CREATED)
     .json({ user: { name: user.name, email: user.email } })
 }
+
 const login = async (req, res) => {
   const { email, password } = req.body
 
@@ -43,6 +44,10 @@ const login = async (req, res) => {
 }
 
 const logout = async (req, res) => {
+  res.cookie('accessToken', 'logout', {
+    httpOnly: true,
+    expires: new Date(Date.now()),
+  })
   res.status(StatusCodes.OK).send()
 }
 
