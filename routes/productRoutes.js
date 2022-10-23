@@ -4,7 +4,6 @@ const {
   authenticateUser,
   authorizePermissions,
 } = require('../middleware/authentication')
-
 const {
   createProduct,
   deleteProduct,
@@ -17,7 +16,8 @@ const {
 router
   .route('/')
   .get(getAllProducts)
-  .post(authenticateUser, authorizePermissions('admin'), createProduct)
+  .post([authenticateUser, authorizePermissions('admin')], createProduct)
+
 router.post(
   '/uploadImage',
   authenticateUser,
