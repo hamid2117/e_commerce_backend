@@ -9,6 +9,7 @@ const app = express()
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
+const fileUpload = require('express-fileupload')
 
 //routers
 const authRouter = require('./routes/authRoutes')
@@ -27,6 +28,9 @@ app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cookieParser(process.env.JWT_SECRET))
 app.use(cors()) // to access api all domain not only same domain for example in node :5000 and react:3000
+app.use(express.static('./public'))
+app.use(fileUpload())
+
 //
 
 app.get('/', (req, res) => {
