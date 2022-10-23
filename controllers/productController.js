@@ -51,7 +51,7 @@ const deleteProduct = async (req, res) => {
     throw new CustomError.BadRequestError(`No product with id :${productId}`)
   }
 
-  product.delete()
+  await product.remove()
 
   res.status(StatusCodes.OK).json({ msg: 'Product is delete' })
 }
