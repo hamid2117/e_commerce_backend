@@ -191,18 +191,18 @@ x
 
 #### Product Structure
 
-- [] add productController file in controllers
-- [] export (createProduct, getAllProducts,
-  getSingleProduct, updateProduct, deleteProduct, uploadImage) functions
-- [] res.send('function name')
-- [] setup productRoutes file in routes
-- [] import all controllers
-- [] only getAllProducts and getSingleProduct accessible to public
-- [] rest only by admin (setup middlewares)
-- [] typical setup
-- [] router.route('/uploadImage').post(uploadImage)
-- [] import productRoutes as productRouter in the app.js
-- [] setup app.use('/api/v1/products', productRouter)
+- [x] add productController file in controllers
+- [x] export (createProduct, getAllProducts,
+      getSingleProduct, updateProduct, deleteProduct, uploadImage) functions
+- [x] res.send('function name')
+- [x] setup productRoutes file in routes
+- [x] import all controllers
+- [x] only getAllProducts and getSingleProduct accessible to public
+- [x] rest only by admin (setup middlewares)
+- [x] typical setup
+- [x] router.route('/uploadImage').post(uploadImage)
+- [x] import productRoutes as productRouter in the app.js
+- [x] setup app.use('/api/v1/products', productRouter)
 
 #### Product Routes in Postman
 

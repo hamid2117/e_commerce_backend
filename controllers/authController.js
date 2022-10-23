@@ -29,7 +29,7 @@ const login = async (req, res) => {
   if (!user) {
     throw new CustomError.UnauthenticatedError('Invalid Crediantials')
   }
-  const isPasswordCorrect = await User.comparePassword(password)
+  const isPasswordCorrect = await user.comparePassword(password)
   if (!isPasswordCorrect) {
     throw new CustomError.UnauthenticatedError('Invalid password')
   }

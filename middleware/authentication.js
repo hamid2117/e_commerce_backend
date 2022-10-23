@@ -2,7 +2,7 @@ const { isTokenValid } = require('../utils')
 const CustomError = require('../errors')
 
 const authenticateUser = (req, res, next) => {
-  const token = req.signedCookies.token
+  const token = req.signedCookies.accessToken
 
   if (!token) {
     throw new CustomError.UnauthenticatedError('Anauthorized User')
@@ -18,7 +18,7 @@ const authenticateUser = (req, res, next) => {
 
 const authorizePermissions = (...roles) => {
   return (req, res, next) => {
-    if (roles.includes(req.user.role)) {
+    if (!roles.includes(req.user.role)) {
       throw new CustomError.UnAuthorizedError(
         'You are UnAuthorized to acces this route'
       )

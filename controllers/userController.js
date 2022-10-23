@@ -55,7 +55,7 @@ const updateUserPassword = async (req, res) => {
 
   const user = await User.findById(req.user.userId).select('password')
 
-  const isMatched = await User.comparePassword(oldPassword)
+  const isMatched = await user.comparePassword(oldPassword)
 
   if (!isMatched) {
     throw new CustomError.UnauthenticatedError('Old Password is incorrect')
