@@ -344,7 +344,7 @@ x
 - [] getAllOrders - admin only
 - [] getSingleOrder - chechPermissions
 
-#### Get Current User Orders
+### Get Current User Orders
 
 - [] find orders where user is equal to req.user.userId
 
