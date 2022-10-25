@@ -59,7 +59,14 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true }
+  { timestamps: true, toJSON: true, toObject: true }
 )
+// now you able to populate review data in product
+productSchema.virtual('reviews', {
+  ref: 'Review',
+  localField: '_id',
+  foreignField: 'product',
+  justOne: false,
+})
 
 module.exports = mongoose.model('Product', productSchema)
