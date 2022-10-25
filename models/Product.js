@@ -69,4 +69,8 @@ productSchema.virtual('reviews', {
   justOne: false,
 })
 
+// hook trigger by remove(deleteProduct)...
+productSchema.pre('remove', async function (next) {
+  await this.model('Review').deleteMany({ product: this._id })
+})
 module.exports = mongoose.model('Product', productSchema)

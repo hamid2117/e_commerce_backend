@@ -51,7 +51,7 @@ const deleteProduct = async (req, res) => {
     throw new CustomError.BadRequestError(`No product with id :${productId}`)
   }
 
-  await product.remove()
+  await product.remove() // it will trigger the hook
 
   res.status(StatusCodes.OK).json({ msg: 'Product is delete' })
 }
