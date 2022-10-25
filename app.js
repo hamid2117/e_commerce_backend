@@ -24,6 +24,7 @@ const connectDB = require('./db/connect')
 //middleware
 const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
+const { authenticateUser } = require('./middleware/authentication')
 
 app.use(express.json())
 app.use(morgan('tiny'))
@@ -44,7 +45,7 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/products', productRouter)
 app.use('/api/v1/reviews', productReview)
-app.use('/api/v1/orders', orderRouter)
+app.use('/api/v1/orders', authenticateUser, orderRouter)
 
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
