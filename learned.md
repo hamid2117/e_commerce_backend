@@ -1,0 +1,6 @@
+- statics
+- virtual
+- pre and post
+- reference to other model , populate & methods
+- aggregation pipline (also able to set in gui of mongodb)
+-
