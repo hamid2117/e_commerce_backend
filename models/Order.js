@@ -15,7 +15,7 @@ const orderSchema = new mongoose.Schema(
   {
     tax: { type: Number, required: true },
     shippingFee: { type: Number, required: true },
-    subtotal: { type: Number, required: true },
+    subTotal: { type: Number, required: true },
     total: { type: Number, required: true },
     orderItems: [singleOrderItemSchema],
     status: {
@@ -29,7 +29,6 @@ const orderSchema = new mongoose.Schema(
       required: [true, 'user id is required'],
     },
     clientSecret: { type: String, required: true },
-    paymentIntentId: { type: String, required: true },
   },
   { timestamps: true }
 )
