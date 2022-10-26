@@ -21,7 +21,7 @@ const getSingleOrder = async (req, res) => {
   const order = await Order.findById(orderId)
 
   if (!order) {
-    throw new CustomError.NotFoundError('order is not found ')
+    throw new CustomError.NotFoundError(`No order with id : ${orderId}`)
   }
 
   checkPermissions(req.user, order.user)
@@ -84,7 +84,21 @@ const createOrder = async (req, res) => {
   res.status(StatusCodes.OK).json({ order, clientSecret: order.clientSecret })
 }
 const updateOrder = async (req, res) => {
-  res.status(StatusCodes.OK).json({})
+  const { id: orderId } = req.params
+  const { paymentIntentId } = req.body
+
+  const order = await Order.findById(orderId)
+
+  if (!order) {
+    throw new CustomError.NotFoundError(`No order with id : ${orderId}`)
+  }
+  checkPermissions(req.user, order.user)
+
+  order.paymentIntentId = paymentIntentId
+  order.status = 'paid'
+  await order.save()
+
+  res.status(StatusCodes.OK).json({ order })
 }
 
 module.exports = {

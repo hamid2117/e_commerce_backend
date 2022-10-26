@@ -29,6 +29,9 @@ const orderSchema = new mongoose.Schema(
       required: [true, 'user id is required'],
     },
     clientSecret: { type: String, required: true },
+    paymentIntentId: {
+      type: String,
+    },
   },
   { timestamps: true }
 )
