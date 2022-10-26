@@ -10,14 +10,27 @@ const fakeStripeApi = async ({ amount, currency }) => {
 }
 
 const getAllOrders = async (req, res) => {
-  res.status(StatusCodes.OK).json({})
+  const orders = await Order.find({})
+
+  res.status(StatusCodes.OK).json({ orders, count: orders.length })
 }
 
 const getSingleOrder = async (req, res) => {
-  res.status(StatusCodes.OK).json({})
+  const { id: orderId } = req.params
+
+  const order = await Order.findById(orderId)
+
+  if (!order) {
+    throw new CustomError.NotFoundError('order is not found ')
+  }
+
+  checkPermissions(req.user, order.user)
+  res.status(StatusCodes.OK).json({ order })
 }
 const getCurrentUserOrders = async (req, res) => {
-  res.status(StatusCodes.OK).json({})
+  const orders = await Order.find({ user: req.user.userId })
+
+  res.status(StatusCodes.OK).json({ orders, count: orders.length })
 }
 const createOrder = async (req, res) => {
   const { items: cartItems, tax, shippingFee } = req.body
