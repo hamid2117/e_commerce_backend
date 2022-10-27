@@ -1,6 +1,6 @@
 require('dotenv').config()
 require('express-async-errors')
-
+const path = require('path')
 //express
 const express = require('express')
 const app = express()
@@ -12,7 +12,7 @@ const fileUpload = require('express-fileupload')
 //swagger
 const swaggerUI = require('swagger-ui-express')
 const YAML = require('yamljs')
-const swaggerDocs = YAML.load(__dirname + '/swagger.yaml')
+const swaggerDocs = YAML.load(path.resolve(__dirname, './swagger.yaml'))
 
 const cors = require('cors')
 const rateLimiter = require('express-rate-limit')
@@ -53,7 +53,7 @@ app.use(morgan('tiny'))
 app.use(cookieParser(process.env.JWT_SECRET))
 app.use(cors()) // to access api all domain not only same domain for example in node :5000 and react:3000
 
-app.use(express.static('./public'))
+app.use(express.static(path.resolve(__dirname, './public')))
 app.use(fileUpload())
 
 app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
