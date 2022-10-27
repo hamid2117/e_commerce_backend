@@ -56,7 +56,6 @@ app.use(cors()) // to access api all domain not only same domain for example in 
 app.use(express.static(path.resolve(__dirname, './public')))
 app.use(fileUpload())
 
-app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 //
 
 app.use('/api/v1/auth', authRouter)
