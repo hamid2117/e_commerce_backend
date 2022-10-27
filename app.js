@@ -9,6 +9,10 @@ const app = express()
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
+//swagger
+const swaggerUI = require('swagger-ui-express')
+const YAML = require('yamljs')
+const swaggerDocs = YAML.load(__dirname + '/swagger.yaml')
 
 const cors = require('cors')
 const rateLimiter = require('express-rate-limit')
@@ -32,16 +36,16 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 const { authenticateUser } = require('./middleware/authentication')
 
 //rateLimiter
-app.use('trust proxy', 1)
+app.set('trust proxy', 1)
 app.use(
   rateLimiter({
     windowMs: 15 * 60 * 1000,
     max: 60,
   })
 )
-//
-app.use(helmet())
-app.use(xss())
+
+//app.use(helmet())
+//app.use(xss())
 app.use(mongoSanitize())
 
 app.use(express.json())
@@ -52,6 +56,7 @@ app.use(cors()) // to access api all domain not only same domain for example in 
 app.use(express.static('./public'))
 app.use(fileUpload())
 
+app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 //
 
 app.use('/api/v1/auth', authRouter)
@@ -67,7 +72,7 @@ const Port = process.env.PORT || 5000
 
 const start = async () => {
   try {
-    await connectDB(process.env.MONGODBDEV)
+    await connectDB(process.env.MONGO_URL)
     app.listen(Port, console.log(`Server is listening on port : ${Port}`))
   } catch (error) {
     console.log(error)

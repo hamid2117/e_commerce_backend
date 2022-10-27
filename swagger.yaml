@@ -1,0 +1,587 @@
+openapi: 3.0.0
+info:
+  title: E-Commrance
+  description: ''
+  contact: {}
+  version: '1.0'
+servers:
+  - url: https://e-commerce-backend-two.vercel.app/api/v1
+    variables: {}
+paths:
+  /reviews/adsf:
+    patch:
+      tags:
+        - Review
+      summary: Update Review
+      description: ''
+      operationId: UpdateReview
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+    get:
+      tags:
+        - Review
+      summary: Single Review
+      description: ''
+      operationId: SingleReview
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+      security: []
+  /reviews/aa:
+    delete:
+      tags:
+        - Review
+      summary: Delete Review
+      description: ''
+      operationId: DeleteReview
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /reviews:
+    post:
+      tags:
+        - Review
+      summary: Create Review
+      description: ''
+      operationId: CreateReview
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/CreateReviewRequest'
+                - example:
+                    title: cotten
+                    product: 6354cf574b4752cf376d2428
+                    comment: this is first comment
+                    rating: 3
+            example:
+              title: cotten
+              product: 6354cf574b4752cf376d2428
+              comment: this is first comment
+              rating: 3
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+    get:
+      tags:
+        - Review
+      summary: AllReview
+      description: ''
+      operationId: AllReview
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /auth/logout:
+    get:
+      tags:
+        - Auth
+      summary: logout
+      description: ''
+      operationId: logout
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /auth/login:
+    post:
+      tags:
+        - Auth
+      summary: Login
+      description: ''
+      operationId: Login
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/LoginRequest'
+                - example:
+                    email: hamid@gmail.com
+                    password: hamidhamid
+            example:
+              email: hamid@gmail.com
+              password: hamidhamid
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+      security: []
+  /auth/register:
+    post:
+      tags:
+        - Auth
+      summary: Register
+      description: ''
+      operationId: Register
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/RegisterRequest'
+                - example:
+                    name: hamid
+                    email: hamid1@gmail.com
+                    password: hamidhamid
+            example:
+              name: hamid
+              email: hamid1@gmail.com
+              password: hamidhamid
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+      security: []
+  /products/6354d3b08a34f7150c97736a:
+    delete:
+      tags:
+        - Product
+      summary: ❌ Product
+      description: ''
+      operationId: ❌Product
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+      security: []
+  /products/someid:
+    patch:
+      tags:
+        - Product
+      summary: Update Product
+      description: ''
+      operationId: UpdateProduct
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+    get:
+      tags:
+        - Product
+      summary: A Product
+      description: ''
+      operationId: AProduct
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+      security: []
+  /products:
+    post:
+      tags:
+        - Product
+      summary: Create Product
+      description: ''
+      operationId: CreateProduct
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/CreateProductRequest'
+                - example:
+                    name: cotten suit
+                    price: 1500
+                    description: this is good suit in every enviroment
+                    company: GulAhmed
+                    featured: true
+                    colors:
+                      - white
+            example:
+              name: cotten suit
+              price: 1500
+              description: this is good suit in every enviroment
+              company: GulAhmed
+              featured: true
+              colors:
+                - white
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+    get:
+      tags:
+        - Product
+      summary: All Products
+      description: ''
+      operationId: AllProducts
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+      security: []
+  /productid/reviews:
+    get:
+      tags:
+        - Product
+      summary: ProductReviews
+      description: ''
+      operationId: ProductReviews
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+      security: []
+  /products/uploadimage:
+    post:
+      tags:
+        - Product
+      summary: Upload Image
+      description: ''
+      operationId: UploadImage
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /orders/orderId:
+    patch:
+      tags:
+        - Order
+      summary: Update Order
+      description: ''
+      operationId: UpdateOrder
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /orders:
+    post:
+      tags:
+        - Order
+      summary: create Order
+      description: ''
+      operationId: createOrder
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+    get:
+      tags:
+        - Order
+      summary: All Orders
+      description: ''
+      operationId: AllOrders
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /orders/showallmyorders:
+    get:
+      tags:
+        - Order
+      summary: User Orders
+      description: ''
+      operationId: UserOrders
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /orders/orderid:
+    get:
+      tags:
+        - Order
+      summary: A Order
+      description: ''
+      operationId: AOrder
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /users/showme:
+    get:
+      tags:
+        - User
+      summary: ShowMe
+      description: ''
+      operationId: ShowMe
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /users/updateuser:
+    patch:
+      tags:
+        - User
+      summary: updateUser
+      description: ''
+      operationId: updateUser
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /users/updateuserpassword:
+    patch:
+      tags:
+        - User
+      summary: updateUserPassword
+      description: ''
+      operationId: updateUserPassword
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /users:
+    get:
+      tags:
+        - User
+      summary: getAllUser
+      description: ''
+      operationId: getAllUser
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+  /users/63538da16d149eecd69c0ba9:
+    get:
+      tags:
+        - User
+      summary: getSingleUser
+      description: ''
+      operationId: getSingleUser
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema: {}
+      deprecated: false
+components:
+  schemas:
+    CreateReviewRequest:
+      title: CreateReviewRequest
+      required:
+        - title
+        - product
+        - comment
+        - rating
+      type: object
+      properties:
+        title:
+          type: string
+        product:
+          type: string
+        comment:
+          type: string
+        rating:
+          type: integer
+          format: int32
+      example:
+        title: cotten
+        product: 6354cf574b4752cf376d2428
+        comment: this is first comment
+        rating: 3
+    LoginRequest:
+      title: LoginRequest
+      required:
+        - email
+        - password
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      example:
+        email: hamid@gmail.com
+        password: hamidhamid
+    RegisterRequest:
+      title: RegisterRequest
+      required:
+        - name
+        - email
+        - password
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+      example:
+        name: hamid
+        email: hamid1@gmail.com
+        password: hamidhamid
+    CreateProductRequest:
+      title: CreateProductRequest
+      required:
+        - name
+        - price
+        - description
+        - company
+        - featured
+        - colors
+      type: object
+      properties:
+        name:
+          type: string
+        price:
+          type: integer
+          format: int32
+        description:
+          type: string
+        company:
+          type: string
+        featured:
+          type: boolean
+        colors:
+          type: array
+          items:
+            type: string
+          description: ''
+      example:
+        name: cotten suit
+        price: 1500
+        description: this is good suit in every enviroment
+        company: GulAhmed
+        featured: true
+        colors:
+          - white
+tags:
+  - name: Auth
+    description: ''
+  - name: Review
+    description: ''
+  - name: Product
+    description: ''
+  - name: Order
+    description: ''
+  - name: User
+    description: ''
