@@ -9,10 +9,6 @@ const app = express()
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
-//swagger
-const swaggerUI = require('swagger-ui-express')
-const YAML = require('yamljs')
-const swaggerDocs = YAML.load(path.resolve(__dirname, './swagger.yaml'))
 
 const cors = require('cors')
 const rateLimiter = require('express-rate-limit')
@@ -44,8 +40,8 @@ app.use(
   })
 )
 
-//app.use(helmet())
-//app.use(xss())
+app.use(helmet())
+app.use(xss())
 app.use(mongoSanitize())
 
 app.use(express.json())
