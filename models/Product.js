@@ -63,7 +63,7 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true }
+  { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 )
 // now you able to populate review data in product
 productSchema.virtual('reviews', {
