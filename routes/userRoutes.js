@@ -1,30 +1,25 @@
 const express = require('express')
 const router = express.Router()
 const {
+  authenticateUser,
+  authorizePermissions,
+} = require('../middleware/authentication')
+const {
   getAllUsers,
   getSingleUser,
   showCurrentUser,
   updateUser,
   updateUserPassword,
 } = require('../controllers/userController')
-const {
-  authenticateUser,
-  authorizePermissions,
-} = require('../middleware/authentication')
 
-router.get('/', authenticateUser, authorizePermissions('admin'), getAllUsers)
+router
+  .route('/')
+  .get(authenticateUser, authorizePermissions('admin'), getAllUsers)
 
-//if you  set simple path below query include path then there is an error. so params path always in last.bcs there is only / .if there is /user/ then there is no problem.
+router.route('/showMe').get(authenticateUser, showCurrentUser)
+router.route('/updateUser').patch(authenticateUser, updateUser)
+router.route('/updateUserPassword').patch(authenticateUser, updateUserPassword)
 
-router.get('/showMe', authenticateUser, showCurrentUser)
-router.patch('/updateUser', authenticateUser, updateUser)
-router.patch('/updateUserPassword', authenticateUser, updateUserPassword)
-
-router.get(
-  '/:id',
-  authenticateUser,
-  authorizePermissions('admin'),
-  getSingleUser
-)
+router.route('/:id').get(authenticateUser, getSingleUser)
 
 module.exports = router

@@ -1,26 +1,45 @@
-const { isTokenValid } = require('../utils')
 const CustomError = require('../errors')
+const Token = require('../models/Token')
+const { isTokenValid, attachCookiesToResponse } = require('../utils')
 
-const authenticateUser = (req, res, next) => {
-  const token = req.signedCookies.accessToken
+//checking if accessToken present then pass user data || if refreshToken present then again attach tokens and pass user data
+const authenticateUser = async (req, res, next) => {
+  const { refreshToken, accessToken } = req.signedCookies
 
-  if (!token) {
-    throw new CustomError.UnauthenticatedError('Anauthorized User')
-  }
   try {
-    const { name, userId, role } = isTokenValid({ token })
-    req.user = { name, userId, role }
+    if (accessToken) {
+      const payload = isTokenValid(accessToken)
+      req.user = payload.user
+      next()
+      return
+    }
+    const payload = isTokenValid(refreshToken)
+    const existingToken = await Token.findOne({
+      user: payload.user.userId,
+      refreshToken: payload.refreshToken,
+    })
+    if (!existingToken || !existingToken?.isValid) {
+      throw new CustomError.UnauthenticatedError('Authentication Invalid')
+    }
+    attachCookiesToResponse({
+      res,
+      user: payload.user,
+      refreshToken: existingToken.refreshToken,
+    })
+
+    req.user = payload.user
+
     next()
   } catch (error) {
-    throw new CustomError.UnauthenticatedError('Anauthorized User')
+    throw new CustomError.UnauthenticatedError('Authentication Invalid')
   }
 }
 
 const authorizePermissions = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
-      throw new CustomError.UnAuthorizedError(
-        'You are UnAuthorized to acces this route'
+      throw new CustomError.UnauthorizedError(
+        'Unauthorized to access this route'
       )
     }
     next()

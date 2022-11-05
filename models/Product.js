@@ -1,12 +1,12 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const productSchema = new mongoose.Schema(
+const ProductSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       trim: true,
       required: [true, 'Please provide product name'],
-      maxLength: [150, 'Name can not be more than 100 characters'],
+      maxlength: [100, 'Name can not be more than 100 characters'],
     },
     price: {
       type: Number,
@@ -15,24 +15,29 @@ const productSchema = new mongoose.Schema(
     },
     description: {
       type: String,
-      maxLength: [1200, 'Description can not be more than 1200 characters'],
+      required: [true, 'Please provide product description'],
+      maxlength: [1000, 'Description can not be more than 1000 characters'],
     },
     image: {
       type: String,
-      default: '/uploads/example.jpg',
+      default: '/uploads/example.jpeg',
     },
     category: {
       type: String,
-      enum: {
-        values: ['cotten', 'loen'],
-        message: '{VALUE} is not supported',
-      },
+      required: [true, 'Please provide product category'],
+      enum: ['office', 'kitchen', 'bedroom'],
     },
     company: {
       type: String,
+      required: [true, 'Please provide company'],
+      enum: {
+        values: ['ikea', 'liddy', 'marcos'],
+        message: '{VALUE} is not supported',
+      },
     },
     colors: {
       type: [String],
+      default: ['#222'],
       required: true,
     },
     featured: {
@@ -44,10 +49,9 @@ const productSchema = new mongoose.Schema(
       default: false,
     },
     inventory: {
-      //stock
       type: Number,
       required: true,
-      default: 2,
+      default: 15,
     },
     averageRating: {
       type: Number,
@@ -64,17 +68,17 @@ const productSchema = new mongoose.Schema(
     },
   },
   { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
-)
-// now you able to populate review data in product
-productSchema.virtual('reviews', {
+);
+
+ProductSchema.virtual('reviews', {
   ref: 'Review',
   localField: '_id',
   foreignField: 'product',
   justOne: false,
-})
+});
 
-// hook trigger by remove(deleteProduct)...
-productSchema.pre('remove', async function (next) {
-  await this.model('Review').deleteMany({ product: this._id })
-})
-module.exports = mongoose.model('Product', productSchema)
+ProductSchema.pre('remove', async function (next) {
+  await this.model('Review').deleteMany({ product: this._id });
+});
+
+module.exports = mongoose.model('Product', ProductSchema);

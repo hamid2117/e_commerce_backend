@@ -3,9 +3,12 @@ const validator = require('validator')
 const bcrypt = require('bcryptjs')
 
 const UserSchema = new mongoose.Schema({
+  verificationToken: String,
+  isVerified: { type: Boolean, default: false },
+  verified: { type: Date },
   name: {
     type: String,
-    required: [true, 'Please provide name '],
+    required: [true, 'Please provide name'],
     minlength: 3,
     maxlength: 50,
   },
@@ -15,7 +18,7 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'Please provide email'],
     validate: {
       validator: validator.isEmail,
-      message: 'please provide valid email',
+      message: 'Please provide valid email',
     },
   },
   password: {
@@ -25,13 +28,17 @@ const UserSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['user', 'admin'],
+    enum: ['admin', 'user'],
     default: 'user',
   },
+  passwordToken: String,
+  passwordTokenExpirationDate: Date,
 })
 
 UserSchema.pre('save', async function () {
-  if (!this.isModified('password')) return // to prevant trigger function without password modified example .save which trigger .pre .post
+  // console.log(this.modifiedPaths());
+  // console.log(this.isModified('name'));
+  if (!this.isModified('password')) return
   const salt = await bcrypt.genSalt(10)
   this.password = await bcrypt.hash(this.password, salt)
 })
