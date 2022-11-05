@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="ie=edge">
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>10-E-Commerce</title>
+<title>E-Commrance</title>
 <style media=screen>
  /*!* Bootstrap v3.3.7 (http://getbootstrap.com)
 * Copyright 2011-2016 Twitter, Inc.
@@ -251,11 +251,11 @@
   }
 
   a[href]:after {
-   content: " ("attr(href) ")"
+   content: " (" attr(href) ")"
   }
 
   abbr[title]:after {
-   content: " ("attr(title) ")"
+   content: " (" attr(title) ")"
   }
 
   a[href^="javascript:"]:after,
@@ -8397,372 +8397,78 @@
 <div class=container-fluid>
  <div class=row>
   <div class="col-md-12 collection-intro">
-   <h3>10-E-Commerce</h3>
+   <h3>E-Commrance</h3>
    <p>
   </div>
   <div class=col-md-12>
    <div class=col-md-3>
     <ul>
-     <li><strong><a href=#Auth>Auth</a></strong>
+     <li><strong><a href=#auth>auth</a></strong>
       <ul>
-       <li><a class=endpoint_menu href=#jump-Auth-LoginUser>Login User</a>
-       <li><a class=endpoint_menu href=#jump-Auth-LogoutUser>Logout User</a>
-       <li><a class=endpoint_menu href=#jump-Auth-RegisterUser>Register User</a>
+       <li><a class=endpoint_menu href=#jump-auth-logout>logout</a>
+       <li><a class=endpoint_menu href=#jump-auth-Login>Login</a>
+       <li><a class=endpoint_menu href=#jump-auth-Register>Register</a>
       </ul>
-     <li><strong><a href=#Order>Order</a></strong>
+     <li><strong><a href=#products>products</a></strong>
       <ul>
-       <li><a class=endpoint_menu href=#jump-Order-CreateOrder>Create Order</a>
-       <li><a class=endpoint_menu href=#jump-Order-GetAllOrders>Get All Orders</a>
-       <li><a class=endpoint_menu href=#jump-Order-GetSingleOrder>Get Single Order</a>
-       <li><a class=endpoint_menu href=#jump-Order-ShowCurrentUserOrders>Show Current User Orders</a>
-       <li><a class=endpoint_menu href=#jump-Order-UpdateOrder>Update Order</a>
+       <li><a class=endpoint_menu href=#jump-products-someid>someid</a>
+       <li><a class=endpoint_menu href=#jump-products-CreateProduct>Create Product</a>
+       <li><a class=endpoint_menu href=#jump-products-AllProducts>All Products</a>
+       <li><a class=endpoint_menu href=#jump-products-_E2_9D_8CProduct>❌ Product</a>
+       <li><a class=endpoint_menu href=#jump-products-UploadImage>Upload Image</a>
       </ul>
-     <li><strong><a href=#Product>Product</a></strong>
+     <li><strong><a href=#orders>orders</a></strong>
       <ul>
-       <li><a class=endpoint_menu href=#jump-Product-CreateProduct>Create Product</a>
-       <li><a class=endpoint_menu href=#jump-Product-DeleteProduct>Delete Product</a>
-       <li><a class=endpoint_menu href=#jump-Product-GetAllProducts>Get All Products</a>
-       <li><a class=endpoint_menu href=#jump-Product-GetSingleProduct>Get Single Product</a>
-       <li><a class=endpoint_menu href=#jump-Product-GetSingleProductReviews>Get Single Product Reviews</a>
-       <li><a class=endpoint_menu href=#jump-Product-UpdateProduct>Update Product</a>
-       <li><a class=endpoint_menu href=#jump-Product-UploadImage>Upload Image</a>
+       <li><a class=endpoint_menu href=#jump-orders-createOrder>create Order</a>
+       <li><a class=endpoint_menu href=#jump-orders-AllOrders>All Orders</a>
+       <li><a class=endpoint_menu href=#jump-orders-UpdateOrder>Update Order</a>
+       <li><a class=endpoint_menu href=#jump-orders-UserOrders>User Orders</a>
+       <li><a class=endpoint_menu href=#jump-orders-AOrder>A Order</a>
       </ul>
-     <li><strong><a href=#Review>Review</a></strong>
+     <li><strong><a href=#reviews>reviews</a></strong>
       <ul>
-       <li><a class=endpoint_menu href=#jump-Review-CreateReview>Create Review</a>
-       <li><a class=endpoint_menu href=#jump-Review-DeleteReview>Delete Review</a>
-       <li><a class=endpoint_menu href=#jump-Review-GetAllReviews>Get All Reviews</a>
-       <li><a class=endpoint_menu href=#jump-Review-GetSingleReview>Get Single Review</a>
-       <li><a class=endpoint_menu href=#jump-Review-UpdateReview>Update Review</a>
+       <li><a class=endpoint_menu href=#jump-reviews-adsf>adsf</a>
+       <li><a class=endpoint_menu href=#jump-reviews-CreateReview>Create Review</a>
+       <li><a class=endpoint_menu href=#jump-reviews-AllReview>AllReview</a>
+       <li><a class=endpoint_menu href=#jump-reviews-DeleteReview>Delete Review</a>
       </ul>
-     <li><strong><a href=#User>User</a></strong>
+     <li><strong><a href=#users>users</a></strong>
       <ul>
-       <li><a class=endpoint_menu href=#jump-User-GetAllUsers>Get All Users</a>
-       <li><a class=endpoint_menu href=#jump-User-GetSingleUser>Get Single User</a>
-       <li><a class=endpoint_menu href=#jump-User-ShowCurrentUser>Show Current User</a>
-       <li><a class=endpoint_menu href=#jump-User-UpdateUser>Update User</a>
-       <li><a class=endpoint_menu href=#jump-User-UpdateUserPassword>Update User Password</a>
+       <li><a class=endpoint_menu href=#jump-users-getAllUser>getAllUser</a>
+       <li><a class=endpoint_menu href=#jump-users-ShowMe>ShowMe</a>
+       <li><a class=endpoint_menu href=#jump-users-updateUser>updateUser</a>
+       <li><a class=endpoint_menu href=#jump-users-updateUserPassword>updateUserPassword</a>
+       <li><a class=endpoint_menu href=#jump-users-getSingleUser>getSingleUser</a>
+      </ul>
+     <li><strong><a href=#Ungrouped>Ungrouped</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Ungrouped-ProductReviews>ProductReviews</a>
       </ul>
     </ul>
    </div>
    <div class=col-md-9>
     <div class="panel panel-default">
      <div class=panel-heading>
-      <h3 class=panel-title id=Auth>Auth
+      <h3 class=panel-title id=auth>auth
        <span class=badge>3</span>
       </h3>
      </div>
      <div class=panel-body>
       <p>
-      <p>Authenticate User
       <div class=request-item>
-       <div class=panel-group id=accordion-Auth>
-        <div class="panel panel-success" id=jump-Auth-LoginUser>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-success data-toggle=collapse data-parent=#accordion-Auth href=#collapse-Auth-LoginUser>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Login User</strong> &nbsp;|&nbsp;
-            <strong class="request-method border-success">POST</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/auth/login
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-Auth-LoginUser class="panel-collapse collapse">
-          <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;email&#34;:&#34;peter@gmail.com&#34;,
-            &#34;password&#34;:&#34;secret&#34;
-            }</span>
-           <div class=clearfix></div>
-          </div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Auth-LogoutUser>
+       <div class=panel-group id=accordion-auth>
+        <div class="panel panel-info" id=jump-auth-logout>
          <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Auth href=#collapse-Auth-LogoutUser>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Logout User</strong>
-            &nbsp;|&nbsp;
+           data-parent=#accordion-auth href=#collapse-auth-logout>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>logout</strong> &nbsp;|&nbsp;
             <strong class="request-method border-info">GET</strong>
             &nbsp;
-            https://e-commerce-api-10.herokuapp.com/auth/logout
+            https://e-commerce-backend-two.vercel.app/api/v1/auth/logout
            </h4>
           </a></div>
-         <div id=collapse-Auth-LogoutUser class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-success" id=jump-Auth-RegisterUser>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-success data-toggle=collapse data-parent=#accordion-Auth href=#collapse-Auth-RegisterUser>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Register User</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-success">POST</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/auth/register
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-Auth-RegisterUser class="panel-collapse collapse">
+         <div id=collapse-auth-logout class="panel-collapse collapse">
           <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;name&#34;: &#34;anna&#34;,
-            &#34;email&#34;: &#34;anna@gmail.com&#34;,
-            &#34;password&#34;: &#34;secret&#34;
-            }</span>
-           <div class=clearfix></div>
-          </div>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="panel panel-default">
-     <div class=panel-heading>
-      <h3 class=panel-title id=Order>Order
-       <span class=badge>5</span>
-      </h3>
-     </div>
-     <div class=panel-body>
-      <p>
-      <div class=request-item>
-       <div class=panel-group id=accordion-Order>
-        <div class="panel panel-success" id=jump-Order-CreateOrder>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-success data-toggle=collapse data-parent=#accordion-Order href=#collapse-Order-CreateOrder>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Order</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-success">POST</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/orders
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-Order-CreateOrder class="panel-collapse collapse">
-          <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;tax&#34;: 499,
-            &#34;shippingFee&#34;: 799,
-            &#34;items&#34;: [
-            {
-            &#34;name&#34;: &#34;bed&#34;,
-            &#34;price&#34;: 2699,
-            &#34;image&#34;:
-            &#34;https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160&#34;,
-            &#34;amount&#34;: 3,
-            &#34;product&#34;: &#34;615c873ad584c748cc86e5bb&#34;
-            },
-            {
-            &#34;name&#34;: &#34;chair&#34;,
-            &#34;price&#34;: 2999,
-            &#34;image&#34;:
-            &#34;https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160&#34;,
-            &#34;amount&#34;: 2,
-            &#34;product&#34;: &#34;615e04a132ba7c9f0338f13e&#34;
-            }
-            ]
-            }</span>
-           <div class=clearfix></div>
-          </div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Order-GetAllOrders>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Order href=#collapse-Order-GetAllOrders>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Orders</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/orders
-           </h4>
-          </a></div>
-         <div id=collapse-Order-GetAllOrders class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Order-GetSingleOrder>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Order href=#collapse-Order-GetSingleOrder>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Order</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/orders/615f4146102158f9aa2674c5
-           </h4>
-          </a></div>
-         <div id=collapse-Order-GetSingleOrder class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Order-ShowCurrentUserOrders>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Order href=#collapse-Order-ShowCurrentUserOrders>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Show Current User Orders</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/orders/showAllMyOrders
-           </h4>
-          </a></div>
-         <div id=collapse-Order-ShowCurrentUserOrders class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-warning" id=jump-Order-UpdateOrder>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-warning data-toggle=collapse data-parent=#accordion-Order href=#collapse-Order-UpdateOrder>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Order</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-warning">PATCH</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/orders/615f4146102158f9aa2674c5
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-Order-UpdateOrder class="panel-collapse collapse">
-          <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;paymentIntentId&#34;:&#34;someRandomId&#34;
-            }</span>
-           <div class=clearfix></div>
-          </div>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="panel panel-default">
-     <div class=panel-heading>
-      <h3 class=panel-title id=Product>Product
-       <span class=badge>7</span>
-      </h3>
-     </div>
-     <div class=panel-body>
-      <p>
-      <div class=request-item>
-       <div class=panel-group id=accordion-Product>
-        <div class="panel panel-success" id=jump-Product-CreateProduct>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-success data-toggle=collapse data-parent=#accordion-Product
-           href=#collapse-Product-CreateProduct>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Product</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-success">POST</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/products
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-Product-CreateProduct class="panel-collapse collapse">
-          <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;name&#34;: &#34;product number 2&#34;,
-            &#34;price&#34;: 25999,
-            &#34;colors&#34;: [&#34;#ff0000&#34;, &#34;#00ff00&#34;, &#34;#0000ff&#34;],
-            &#34;company&#34;: &#34;ikea&#34;,
-            &#34;description&#34;: &#34;Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy
-            8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral
-            typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork
-            chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge&#34;,
-            &#34;category&#34;: &#34;office&#34;,
-            &#34;featured&#34;:&#34;false&#34;
-            }</span>
-           <div class=clearfix></div>
-          </div>
-         </div>
-        </div>
-        <div class="panel panel-danger" id=jump-Product-DeleteProduct>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-danger data-toggle=collapse
-           data-parent=#accordion-Product href=#collapse-Product-DeleteProduct>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Delete Product</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-danger">DELETE</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/products/61589c332d89d6d03c4b097c
-           </h4>
-          </a></div>
-         <div id=collapse-Product-DeleteProduct class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Product-GetAllProducts>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Product href=#collapse-Product-GetAllProducts>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Products</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/products
-           </h4>
-          </a></div>
-         <div id=collapse-Product-GetAllProducts class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Product-GetSingleProduct>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Product href=#collapse-Product-GetSingleProduct>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Product</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/products/6154c3286643006af7fb3dc6
-           </h4>
-          </a></div>
-         <div id=collapse-Product-GetSingleProduct class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Product-GetSingleProductReviews>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Product href=#collapse-Product-GetSingleProductReviews>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Product
-             Reviews</strong> &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/products/6155fa77832f66342888475e/reviews
-           </h4>
-          </a></div>
-         <div id=collapse-Product-GetSingleProductReviews class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-warning" id=jump-Product-UpdateProduct>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-warning data-toggle=collapse data-parent=#accordion-Product
-           href=#collapse-Product-UpdateProduct>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Product</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-warning">PATCH</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/products/6154c3286643006af7fb3dc6
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-Product-UpdateProduct class="panel-collapse collapse">
-          <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;name&#34; :&#34;new testing product&#34;
-            }</span>
-           <div class=clearfix></div>
-          </div>
-         </div>
-        </div>
-        <div class="panel panel-success" id=jump-Product-UploadImage>
-         <div class=panel-heading><small class="pull-right text-muted">formdata</small>
-          <a class=text-success data-toggle=collapse data-parent=#accordion-Product href=#collapse-Product-UploadImage>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Upload Image</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-success">POST</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/products/uploadImage
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-Product-UploadImage class="panel-collapse collapse">
-          <div class=panel-body>
-           <h5 class="label label-primary">Body</h5>
+           <h5 class="label label-warning">Headers</h5>
            <table class="table table-hover">
             <thead>
              <tr>
@@ -8771,10 +8477,120 @@
               <th>Description
             <tbody>
              <tr>
-              <td>image
+              <td>Accept
+              <td>text/plain
               <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_auth_logout_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_auth_logout_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/auth/logout</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-auth-Login>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-auth href=#collapse-auth-Login>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Login</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/auth/login
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-auth-Login class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Content-Type
+              <td>application/json
+              <td>
+             <tr>
+              <td>Accept
+              <td>text/plain
               <td>
            </table>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;email&#34;: &#34;hamid@gmail.com&#34;,
+            &#34;password&#34;: &#34;hamidhamid&#34;
+            }</span>
+           <div class=clearfix></div><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_auth_Login_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_auth_Login_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/auth/login</h5>
+            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+             &#34;email&#34;: &#34;hamid@gmail.com&#34;,
+             &#34;password&#34;: &#34;hamidhamid&#34;
+             }</span>
+            <div class=clearfix></div>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-auth-Register>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-auth href=#collapse-auth-Register>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Register</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/auth/register
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-auth-Register class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Content-Type
+              <td>application/json
+              <td>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;: &#34;hamid&#34;,
+            &#34;email&#34;: &#34;hamid1@gmail.com&#34;,
+            &#34;password&#34;: &#34;hamidhamid&#34;
+            }</span>
+           <div class=clearfix></div><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_auth_Register_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_auth_Register_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/auth/register</h5>
+            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+             &#34;name&#34;: &#34;hamid&#34;,
+             &#34;email&#34;: &#34;hamid1@gmail.com&#34;,
+             &#34;password&#34;: &#34;hamidhamid&#34;
+             }</span>
+            <div class=clearfix></div>
+            <h4>Example Response</h4>
+           </section>
           </div>
          </div>
         </div>
@@ -8784,98 +8600,536 @@
     </div>
     <div class="panel panel-default">
      <div class=panel-heading>
-      <h3 class=panel-title id=Review>Review
+      <h3 class=panel-title id=products>products
        <span class=badge>5</span>
       </h3>
      </div>
      <div class=panel-body>
       <p>
       <div class=request-item>
-       <div class=panel-group id=accordion-Review>
-        <div class="panel panel-success" id=jump-Review-CreateReview>
+       <div class=panel-group id=accordion-products>
+        <div class="panel panel-info" id=jump-products-someid>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-products href=#collapse-products-someid>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>someid</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-info"></strong>&nbsp;
+           </h4>
+          </a></div>
+         <div id=collapse-products-someid class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-products-CreateProduct>
          <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-success data-toggle=collapse data-parent=#accordion-Review href=#collapse-Review-CreateReview>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-products
+           href=#collapse-products-CreateProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/products
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-products-CreateProduct class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Content-Type
+              <td>application/json
+              <td>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;: &#34;cotten suit&#34;,
+            &#34;price&#34;: 1500,
+            &#34;description&#34;: &#34;this is good suit in every enviroment&#34;,
+            &#34;company&#34;: &#34;GulAhmed&#34;,
+            &#34;featured&#34;: true,
+            &#34;colors&#34;: [
+            &#34;white&#34;
+            ]
+            }</span>
+           <div class=clearfix></div><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_products_CreateProduct_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_products_CreateProduct_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/products</h5>
+            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+             &#34;name&#34;: &#34;cotten suit&#34;,
+             &#34;price&#34;: 1500,
+             &#34;description&#34;: &#34;this is good suit in every enviroment&#34;,
+             &#34;company&#34;: &#34;GulAhmed&#34;,
+             &#34;featured&#34;: true,
+             &#34;colors&#34;: [
+             &#34;white&#34;
+             ]
+             }</span>
+            <div class=clearfix></div>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-products-AllProducts>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-products href=#collapse-products-AllProducts>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>All Products</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/products
+           </h4>
+          </a></div>
+         <div id=collapse-products-AllProducts class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_products_AllProducts_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_products_AllProducts_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/products</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-danger" id=jump-products-_E2_9D_8CProduct>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-danger data-toggle=collapse
+           data-parent=#accordion-products href=#collapse-products-_E2_9D_8CProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>❌ Product</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-danger">DELETE</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/products/6354d3b08a34f7150c97736a
+           </h4>
+          </a></div>
+         <div id=collapse-products-_E2_9D_8CProduct class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_products__E2_9D_8CProduct_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_products__E2_9D_8CProduct_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/products/6354d3b08a34f7150c97736a</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-products-UploadImage>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-success
+           data-toggle=collapse data-parent=#accordion-products href=#collapse-products-UploadImage>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Upload Image</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/products/uploadimage
+           </h4>
+          </a></div>
+         <div id=collapse-products-UploadImage class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_products_UploadImage_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_products_UploadImage_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/products/uploadimage</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=orders>orders
+       <span class=badge>5</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-orders>
+        <div class="panel panel-success" id=jump-orders-createOrder>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-success
+           data-toggle=collapse data-parent=#accordion-orders href=#collapse-orders-createOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>create Order</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/orders
+           </h4>
+          </a></div>
+         <div id=collapse-orders-createOrder class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_orders_createOrder_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_orders_createOrder_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/orders</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-orders-AllOrders>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-orders href=#collapse-orders-AllOrders>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>All Orders</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/orders
+           </h4>
+          </a></div>
+         <div id=collapse-orders-AllOrders class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_orders_AllOrders_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_orders_AllOrders_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/orders</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-orders-UpdateOrder>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-warning
+           data-toggle=collapse data-parent=#accordion-orders href=#collapse-orders-UpdateOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Order</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/orders/orderId
+           </h4>
+          </a></div>
+         <div id=collapse-orders-UpdateOrder class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_orders_UpdateOrder_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_orders_UpdateOrder_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/orders/orderId</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-orders-UserOrders>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-orders href=#collapse-orders-UserOrders>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>User Orders</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/orders/showallmyorders
+           </h4>
+          </a></div>
+         <div id=collapse-orders-UserOrders class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_orders_UserOrders_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_orders_UserOrders_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/orders/showallmyorders</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-orders-AOrder>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-orders href=#collapse-orders-AOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>A Order</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/orders/orderid
+           </h4>
+          </a></div>
+         <div id=collapse-orders-AOrder class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_orders_AOrder_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_orders_AOrder_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/orders/orderid</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=reviews>reviews
+       <span class=badge>4</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-reviews>
+        <div class="panel panel-info" id=jump-reviews-adsf>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-reviews href=#collapse-reviews-adsf>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>adsf</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-info"></strong>&nbsp;
+           </h4>
+          </a></div>
+         <div id=collapse-reviews-adsf class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-reviews-CreateReview>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-reviews href=#collapse-reviews-CreateReview>
            <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Review</strong>
             &nbsp;|&nbsp;
             <strong class="request-method border-success">POST</strong>
             &nbsp;
-            https://e-commerce-api-10.herokuapp.com/reviews
+            https://e-commerce-backend-two.vercel.app/api/v0/reviews
            </h4>
           </a>
          </div>
-         <div id=collapse-Review-CreateReview class="panel-collapse collapse">
+         <div id=collapse-reviews-CreateReview class="panel-collapse collapse">
           <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Content-Type
+              <td>application/json
+              <td>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table>
            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;product&#34;:&#34;615c873ad584c748cc86e5bb&#34;,
-            &#34;rating&#34;:1,
-            &#34;title&#34;:&#34;very good product&#34;,
-            &#34;comment&#34;:&#34;very, very good product&#34;
+            &#34;title&#34;: &#34;cotten&#34;,
+            &#34;product&#34;: &#34;6353cf574b4752cf376d2428&#34;,
+            &#34;comment&#34;: &#34;this is first comment&#34;,
+            &#34;rating&#34;: 3
             }</span>
-           <div class=clearfix></div>
+           <div class=clearfix></div><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_reviews_CreateReview_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_reviews_CreateReview_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v0/reviews</h5>
+            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+             &#34;title&#34;: &#34;cotten&#34;,
+             &#34;product&#34;: &#34;6353cf574b4752cf376d2428&#34;,
+             &#34;comment&#34;: &#34;this is first comment&#34;,
+             &#34;rating&#34;: 3
+             }</span>
+            <div class=clearfix></div>
+            <h4>Example Response</h4>
+           </section>
           </div>
          </div>
         </div>
-        <div class="panel panel-danger" id=jump-Review-DeleteReview>
+        <div class="panel panel-info" id=jump-reviews-AllReview>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-reviews href=#collapse-reviews-AllReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>AllReview</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v0/reviews
+           </h4>
+          </a></div>
+         <div id=collapse-reviews-AllReview class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_reviews_AllReview_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_reviews_AllReview_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v0/reviews</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-danger" id=jump-reviews-DeleteReview>
          <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-danger data-toggle=collapse
-           data-parent=#accordion-Review href=#collapse-Review-DeleteReview>
+           data-parent=#accordion-reviews href=#collapse-reviews-DeleteReview>
            <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Delete Review</strong>
             &nbsp;|&nbsp;
             <strong class="request-method border-danger">DELETE</strong>
             &nbsp;
-            https://e-commerce-api-10.herokuapp.com/reviews/615de44828b69f6ec77caa0c
+            https://e-commerce-backend-two.vercel.app/api/v0/reviews/aa
            </h4>
           </a></div>
-         <div id=collapse-Review-DeleteReview class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Review-GetAllReviews>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Review href=#collapse-Review-GetAllReviews>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Reviews</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/reviews
-           </h4>
-          </a></div>
-         <div id=collapse-Review-GetAllReviews class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-Review-GetSingleReview>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-Review href=#collapse-Review-GetSingleReview>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Review</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/reviews/61560e910a8b8820af76f681
-           </h4>
-          </a></div>
-         <div id=collapse-Review-GetSingleReview class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-warning" id=jump-Review-UpdateReview>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-warning data-toggle=collapse data-parent=#accordion-Review href=#collapse-Review-UpdateReview>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Review</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-warning">PATCH</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/reviews/615c9385ba4935b9aea4a444
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-Review-UpdateReview class="panel-collapse collapse">
+         <div id=collapse-reviews-DeleteReview class="panel-collapse collapse">
           <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;rating&#34;:1,
-            &#34;title&#34;:&#34;very bad product&#34;,
-            &#34;comment&#34;:&#34;very, very bad product by susan&#34;
-            }</span>
-           <div class=clearfix></div>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_reviews_DeleteReview_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_reviews_DeleteReview_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v0/reviews/aa</h5>
+            <h4>Example Response</h4>
+           </section>
           </div>
          </div>
         </div>
@@ -8885,112 +9139,278 @@
     </div>
     <div class="panel panel-default">
      <div class=panel-heading>
-      <h3 class=panel-title id=User>User
+      <h3 class=panel-title id=users>users
        <span class=badge>5</span>
       </h3>
      </div>
      <div class=panel-body>
       <p>
       <div class=request-item>
-       <div class=panel-group id=accordion-User>
-        <div class="panel panel-info" id=jump-User-GetAllUsers>
+       <div class=panel-group id=accordion-users>
+        <div class="panel panel-info" id=jump-users-getAllUser>
          <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-User href=#collapse-User-GetAllUsers>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Users</strong>
-            &nbsp;|&nbsp;
+           data-parent=#accordion-users href=#collapse-users-getAllUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>getAllUser</strong> &nbsp;|&nbsp;
             <strong class="request-method border-info">GET</strong>
             &nbsp;
-            https://e-commerce-api-10.herokuapp.com/users
+            https://e-commerce-backend-two.vercel.app/api/v1/users
            </h4>
           </a></div>
-         <div id=collapse-User-GetAllUsers class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-User-GetSingleUser>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-User href=#collapse-User-GetSingleUser>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single User</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/users/6150a1001364422066ce901c
-           </h4>
-          </a></div>
-         <div id=collapse-User-GetSingleUser class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-info" id=jump-User-ShowCurrentUser>
-         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
-           data-parent=#accordion-User href=#collapse-User-ShowCurrentUser>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Show Current User</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-info">GET</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/users/showMe
-           </h4>
-          </a></div>
-         <div id=collapse-User-ShowCurrentUser class="panel-collapse collapse">
-          <div class=panel-body></div>
-         </div>
-        </div>
-        <div class="panel panel-warning" id=jump-User-UpdateUser>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-warning data-toggle=collapse data-parent=#accordion-User href=#collapse-User-UpdateUser>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update User</strong>
-            &nbsp;|&nbsp;
-            <strong class="request-method border-warning">PATCH</strong>
-            &nbsp;
-            https://e-commerce-api-10.herokuapp.com/users/updateUser
-           </h4>
-          </a>
-         </div>
-         <div id=collapse-User-UpdateUser class="panel-collapse collapse">
+         <div id=collapse-users-getAllUser class="panel-collapse collapse">
           <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;name&#34;:&#34;john&#34;,&#34;email&#34;:&#34;john@gmail.com&#34;
-            }</span>
-           <div class=clearfix></div>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_users_getAllUser_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_users_getAllUser_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/users</h5>
+            <h4>Example Response</h4>
+           </section>
           </div>
          </div>
         </div>
-        <div class="panel panel-warning" id=jump-User-UpdateUserPassword>
-         <div class=panel-heading><small class="pull-right text-muted">raw</small>
-          <a class=text-warning data-toggle=collapse data-parent=#accordion-User href=#collapse-User-UpdateUserPassword>
-           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update User Password</strong>
+        <div class="panel panel-info" id=jump-users-ShowMe>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-users href=#collapse-users-ShowMe>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>ShowMe</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/users/showme
+           </h4>
+          </a></div>
+         <div id=collapse-users-ShowMe class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_users_ShowMe_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_users_ShowMe_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/users/showme</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-users-updateUser>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-warning
+           data-toggle=collapse data-parent=#accordion-users href=#collapse-users-updateUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>updateUser</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/users/updateuser
+           </h4>
+          </a></div>
+         <div id=collapse-users-updateUser class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_users_updateUser_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_users_updateUser_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/users/updateuser</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-users-updateUserPassword>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-warning
+           data-toggle=collapse data-parent=#accordion-users href=#collapse-users-updateUserPassword>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>updateUserPassword</strong>
             &nbsp;|&nbsp;
             <strong class="request-method border-warning">PATCH</strong>
             &nbsp;
-            https://e-commerce-api-10.herokuapp.com/users/updateUserPassword
+            https://e-commerce-backend-two.vercel.app/api/v1/users/updateuserpassword
            </h4>
-          </a>
-         </div>
-         <div id=collapse-User-UpdateUserPassword class="panel-collapse collapse">
+          </a></div>
+         <div id=collapse-users-updateUserPassword class="panel-collapse collapse">
           <div class=panel-body>
-           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-            &#34;newPassword&#34;:&#34;newsecret&#34;,
-            &#34;oldPassword&#34;:&#34;secret&#34;
-            }</span>
-           <div class=clearfix></div>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_users_updateUserPassword_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_users_updateUserPassword_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/users/updateuserpassword</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-users-getSingleUser>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-users href=#collapse-users-getSingleUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>getSingleUser</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/users/63538da16d149eecd69c0ba9
+           </h4>
+          </a></div>
+         <div id=collapse-users-getSingleUser class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_users_getSingleUser_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_users_getSingleUser_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/users/63538da16d149eecd69c0ba9</h5>
+            <h4>Example Response</h4>
+           </section>
           </div>
          </div>
         </div>
        </div>
       </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Ungrouped>Ungrouped
+       <span class=badge>1</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-Ungrouped>
+        <div class="panel panel-info" id=jump-Ungrouped-ProductReviews>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Ungrouped href=#collapse-Ungrouped-ProductReviews>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>ProductReviews</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://e-commerce-backend-two.vercel.app/api/v1/productid/reviews
+           </h4>
+          </a></div>
+         <div id=collapse-Ungrouped-ProductReviews class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-warning">Headers</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>Accept
+              <td>text/plain
+              <td>
+           </table><select class=resp-selector>
+            <option value>Select Example Request/Response
+            <option value=req_res_Ungrouped_ProductReviews_0_UntitledExample>Untitled Example
+           </select><br>
+           <section id=req_res_Ungrouped_ProductReviews_0_UntitledExample style=display:none>
+            <h4>Example Request</h4>
+            <h5>URL: https://e-commerce-backend-two.vercel.app/api/v1/productid/reviews</h5>
+            <h4>Example Response</h4>
+           </section>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title>Available Variables
+       <span class=badge>1</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <table class="table table-hover">
+       <thead>
+        <tr>
+         <th>Key
+         <th>Value
+         <th>Type
+       <tbody>
+        <tr>
+         <td>baseUrl
+         <td>https://e-commerce-backend-two.vercel.app/api/v1
+         <td>string
+      </table>
+      <div class=clearfix></div>
      </div>
     </div>
    </div>
   </div>
  </div>
+
+ <script src="./brower.js"></script>
  <br><br>
- <script src="./browser-app.js"></script>
  <footer class="navbar-default navbar-fixed-bottom">
   <div class=container-fluid>
    <div class="span12 text-center"><span data-toggle=tooltip
-     title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Made
-     with <em class=love-color>&#9829;</em> by <a href=https://github.com/thedevsaddam target=_blank
-      class=text-muted>thedevsaddam</a> | Generated at: 2021-10-09 10:02:11 by <a
-      href=https://github.com/thedevsaddam/docgen target=_blank class=text-muted>docgen</a></span></div>
+     title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Generated
+     at 2022-11-05 16:55:42 by <a href=https://github.com/thedevsaddam/docgen target=_blank
+      class=text-muted>docgen</a></span></div>
   </div>
  </footer>
