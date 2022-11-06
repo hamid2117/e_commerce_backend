@@ -1,0 +1,1204 @@
+{
+  "info": {
+    "_postman_id": "a5c9c2bc-fb9e-497b-ba40-c5626cd57b6b",
+    "name": "E-Commrance",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24096285"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "logout",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/logout",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["auth", "logout"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/logout",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["auth", "logout"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"hamid1@gmail.com\",\n  \"password\": \"hamidhamid\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/login",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"hamid@gmail.com\",\n  \"password\": \"hamidhamid\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/login",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["auth", "login"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"hamid\",\n  \"email\": \"hamid1@gmail.com\",\n  \"password\": \"hamidhamid\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/register",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["auth", "register"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"hamid\",\n  \"email\": \"hamid1@gmail.com\",\n  \"password\": \"hamidhamid\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/register",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["auth", "register"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Verify-Email",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\":\"token value\",\r\n    \"email\":\"exameple@mail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/verify-email",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["auth", "verify-email"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"example@mail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/reset-password",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["auth", "reset-password"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\":\"token value \",\r\n    \"email\":\"example@mail.com\",\r\n    \"password\":\"any password\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/auth/forgot-password",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["auth", "forgot-password"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"2 cotten suit\",\n  \"price\": 1500,\n  \"description\": \"this is good suit in every enviroment\",\n  \"company\": \"GulAhmed\",\n  \"featured\": true,\n  \"colors\": [\n    \"white\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["products"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"cotten suit\",\n  \"price\": 1500,\n  \"description\": \"this is good suit in every enviroment\",\n  \"company\": \"GulAhmed\",\n  \"featured\": true,\n  \"colors\": [\n    \"white\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["products"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "A Product",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products/someid",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["products", "someid"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"cotten suit\",\r\n  \"price\": 1500,\r\n  \"description\": \"this is good suit in every enviroment\",\r\n  \"company\": \"GulAhmed\",\r\n  \"featured\": true,\r\n  \"colors\": [\r\n    \"white\"\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products/someid",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["products", "someid"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "All Products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["products"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["products"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "❌ Product",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products/6354d3b08a34f7150c97736a",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["products", "6354d3b08a34f7150c97736a"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products/6354d3b08a34f7150c97736a",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["products", "6354d3b08a34f7150c97736a"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Upload Image",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products/uploadimage",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["products", "uploadimage"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/products/uploadimage",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["products", "uploadimage"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "ProductReviews",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/productid/reviews",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["productid", "reviews"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/productid/reviews",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["productid", "reviews"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reviews",
+      "item": [
+        {
+          "name": "Update Review",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"cotten\",\r\n  \"product\": \"6354cf574b4752cf376d2428\",\r\n  \"comment\": \"this is first comment\",\r\n  \"rating\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews/adsf",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["reviews", "adsf"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews/adsf",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["reviews", "adsf"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Single Review",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews/someid",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["reviews", "someid"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Review",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"cotten\",\n  \"product\": \"6354cf574b4752cf376d2428\",\n  \"comment\": \"this is first comment\",\n  \"rating\": 3\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["reviews"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"cotten\",\n  \"product\": \"6354cf574b4752cf376d2428\",\n  \"comment\": \"this is first comment\",\n  \"rating\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["reviews"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "AllReview",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["reviews"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["reviews"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Delete Review",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews/aa",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["reviews", "aa"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/reviews/aa",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["reviews", "aa"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n    \"tax\": 399,\r\n    \"shippingFee\": 499,\r\n    \"items\": [\r\n      {\r\n        \"name\": \"accent chair\",\r\n        \"price\": 2599,\r\n        \"image\": \"https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160\",\r\n        \"amount\": 34,\r\n        \"product\": \"635bda45a946529fdb5fec3d\"\r\n      }\r\n    ]\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["orders"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["orders"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "All Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["orders"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["orders"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Update Order",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders/orderId",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["orders", "orderId"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders/orderId",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["orders", "orderId"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "User Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders/showallmyorders",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["orders", "showallmyorders"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders/showallmyorders",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["orders", "showallmyorders"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "A Order",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders/orderid",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["orders", "orderid"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/orders/orderid",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["orders", "orderid"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "getAllUser",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["users"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["users"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "ShowMe",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users/showme",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["users", "showme"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users/showme",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["users", "showme"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "updateUser",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users/updateuser",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["users", "updateuser"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users/updateuser",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["users", "updateuser"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "updateUserPassword",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users/updateuserpassword",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["users", "updateuserpassword"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users/updateuserpassword",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["users", "updateuserpassword"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "getSingleUser",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "url": {
+              "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users/63538da16d149eecd69c0ba9",
+              "host": ["https://e-commerce-backend-two.vercel.app/"],
+              "path": ["users", "63538da16d149eecd69c0ba9"]
+            }
+          },
+          "response": [
+            {
+              "name": "Untitled Example",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e-commerce-backend-two.vercel.app/api/v1/users/63538da16d149eecd69c0ba9",
+                  "host": ["https://e-commerce-backend-two.vercel.app/"],
+                  "path": ["users", "63538da16d149eecd69c0ba9"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://e-commerce-backend-two.vercel.app/api/v1",
+      "type": "string"
+    }
+  ]
+}
