@@ -1,8 +1,3 @@
-/*
- * Requires the MongoDB Node.js Driver
- * https://mongodb.github.io/node-mongodb-native
- */
-
 const agg = [
   {
     $match: {
