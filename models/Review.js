@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const ReviewSchema = mongoose.Schema(
   {
@@ -30,8 +30,8 @@ const ReviewSchema = mongoose.Schema(
     },
   },
   { timestamps: true }
-);
-ReviewSchema.index({ product: 1, user: 1 }, { unique: true });
+)
+ReviewSchema.index({ product: 1, user: 1 }, { unique: true }) // one user only able to write only 1 review per product.
 
 ReviewSchema.statics.calculateAverageRating = async function (productId) {
   const result = await this.aggregate([
@@ -43,7 +43,7 @@ ReviewSchema.statics.calculateAverageRating = async function (productId) {
         numOfReviews: { $sum: 1 },
       },
     },
-  ]);
+  ])
 
   try {
     await this.model('Product').findOneAndUpdate(
@@ -52,18 +52,18 @@ ReviewSchema.statics.calculateAverageRating = async function (productId) {
         averageRating: Math.ceil(result[0]?.averageRating || 0),
         numOfReviews: result[0]?.numOfReviews || 0,
       }
-    );
+    )
   } catch (error) {
-    console.log(error);
+    console.log(error)
   }
-};
+}
 
 ReviewSchema.post('save', async function () {
-  await this.constructor.calculateAverageRating(this.product);
-});
+  await this.constructor.calculateAverageRating(this.product)
+})
 
 ReviewSchema.post('remove', async function () {
-  await this.constructor.calculateAverageRating(this.product);
-});
+  await this.constructor.calculateAverageRating(this.product)
+})
 
-module.exports = mongoose.model('Review', ReviewSchema);
+module.exports = mongoose.model('Review', ReviewSchema)
