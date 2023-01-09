@@ -70,7 +70,9 @@ const ProductSchema = new mongoose.Schema(
   // to accepts virtuals (product related all reviews) .
   { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 )
-
+// virtual first argu property name (which we add to product)
+// in Review Collection product (ref property ) related to local (product) _id
+//now you can get data in product schema by using populate method by passing reviews in it.
 ProductSchema.virtual('reviews', {
   ref: 'Review',
   localField: '_id',
