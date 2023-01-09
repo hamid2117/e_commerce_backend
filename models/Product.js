@@ -78,7 +78,7 @@ ProductSchema.virtual('reviews', {
   ref: 'Review',
   localField: '_id',
   foreignField: 'product',
-  justOne: false,
+  justOne: false, // only review which have 5 rating will get
 })
 
 ProductSchema.pre('remove', async function (next) {
