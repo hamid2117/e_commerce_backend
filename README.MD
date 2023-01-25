@@ -41,8 +41,7 @@
 - [x] re-watch project 08
 - [x] ethereal credentials (create account/login)
 - [x] install nodemailer
-- [x] create (nodemailerConfig, sendEmail,
-      sendResetPasswordEmail, sendVerficationEmail) files in utils
+- [x] create (nodemailerConfig, sendEmail,sendResetPasswordEmail, sendVerficationEmail) files in utils
 
 #### Send Verification Link
 
@@ -80,8 +79,16 @@
 
 #### Forgot Password Controller
 
+done
+
 #### Send Reset Password Email
+
+done
 
 #### Reset Password Controller
 
+done
+
 #### Hash Password Token
+
+done
