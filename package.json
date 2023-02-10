@@ -7,7 +7,7 @@
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "author": "",
+  "author": "Hamid",
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
