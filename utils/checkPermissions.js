@@ -1,4 +1,5 @@
 const CustomError = require('../errors')
+
 // checking permissions of the route
 const chechPermissions = (requestUser, resourceUserId) => {
   if (requestUser.role === 'admin') return
