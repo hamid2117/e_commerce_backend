@@ -1,7 +1,7 @@
 {
   "name": "e-commerce-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "E Commerce  Api's ",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
