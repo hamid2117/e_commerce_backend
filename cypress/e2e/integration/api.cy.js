@@ -1,3 +1,6 @@
+// for vscode suggestion
+/// <reference types="cypress" />
+
 context('Login API', () => {
   it('returns the correct response', () => {
     cy.request({
