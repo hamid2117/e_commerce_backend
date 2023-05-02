@@ -71,6 +71,8 @@ const login = async (req, res) => {
 
   //check for existing token
 
+  // create refresh token
+  let refreshToken = ''
   const existingToken = await Token.findOne({ user: user._id })
 
   if (existingToken) {
@@ -88,7 +90,7 @@ const login = async (req, res) => {
 
   // create refresh token
 
-  let refreshToken = crypto.randomBytes(40).toString('hex')
+  refreshToken = crypto.randomBytes(40).toString('hex')
   let userAgent = req.headers['user-agent'] // platform where the request made
   const ip = req.ip
   const userToken = { refreshToken, ip, userAgent, user: user._id }

@@ -25,13 +25,13 @@ const ProductSchema = new mongoose.Schema(
     category: {
       type: String,
       required: [true, 'Please provide product category'],
-      enum: ['office', 'kitchen', 'bedroom'],
+      enum: ['cotton', 'washandwear'],
     },
     company: {
       type: String,
       required: [true, 'Please provide company'],
       enum: {
-        values: ['ikea', 'liddy', 'marcos'],
+        values: ['GulAhmed', 'J.'],
         message: '{VALUE} is not supported',
       },
     },
